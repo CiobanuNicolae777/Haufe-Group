@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdaugareTrotinete">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Oras" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NrTrotinete" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GestionareTrotinete">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Oras" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Strada" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NrTroninete" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rezervari">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="int" />
+    <Property Name="Oras" Type="nvarchar" MaxLength="50" />
+    <Property Name="Strada" Type="nvarchar" MaxLength="50" />
+    <Property Name="NrTrotinete" Type="int" />
+    <Property Name="NrOre" Type="int" />
+    <Property Name="DataRezervare" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="AdaugareTrotinete" EntityType="Self.AdaugareTrotinete" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GestionareTrotinete" EntityType="Self.GestionareTrotinete" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rezervari" EntityType="Self.Rezervari" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

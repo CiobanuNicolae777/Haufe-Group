@@ -1,0 +1,89 @@
+﻿@using WebApplication10.Models
+
+@model IEnumerable<WebApplication10.Models.AdaugareTrotinete>
+
+@{
+    ViewBag.Title = "ActualizareDate";
+}
+
+<center><h2>Actualizare Date</h2></center>
+
+
+<style>
+    .noua-clasa-tabel {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #e0e0e0;
+    }
+
+        .noua-clasa-tabel th, .noua-clasa-tabel td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .noua-clasa-tabel th {
+            background-color: #e0e0e0;
+            color: black;
+        }
+
+        .noua-clasa-tabel tr:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+
+    .TextBox_cauta {
+        margin-right: 5px;
+    }
+    .textbox {
+        width: 150px;
+        border: 1px solid black;
+        margin-right: 5px;
+    }
+
+</style>
+
+<div class="search-bar">
+    @using (Html.BeginForm("ActualizareDate", "Home", FormMethod.Get))
+    {
+        <div class="input-group justify-content-end">
+            <input type="text" name="search" class="form-control TextBox_cauta" placeholder="Caută..." value="@ViewBag.Search" />
+            <select name="searchType" class="textbox">            
+                <option value="Oras" @(ViewBag.SearchType == "Oras" ? "selected" : "")>Oras</option>
+                <option value="NrTrotinete" @(ViewBag.SearchType == "NrTrotinete" ? "selected" : "")>Nr de trotinete</option>
+            </select>
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">Caută</button>
+            </span>
+        </div>
+    }
+</div>
+
+
+
+
+<table class="noua-clasa-tabel">
+    <tr>
+        <th>
+            Oras
+        </th>
+        <th>
+            Numar de Trotinete
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oras)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrTrotinete)
+            </td>         
+            <td>
+                @Html.ActionLink("Editează", "Editează", new { Id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

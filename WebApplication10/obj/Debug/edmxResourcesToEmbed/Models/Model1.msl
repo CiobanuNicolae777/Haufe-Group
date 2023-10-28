@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1">
+    <EntitySetMapping Name="AdaugareTrotinete">
+      <EntityTypeMapping TypeName="Database1Model.AdaugareTrotinete">
+        <MappingFragment StoreEntitySet="AdaugareTrotinete">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Oras" ColumnName="Oras" />
+          <ScalarProperty Name="NrTrotinete" ColumnName="NrTrotinete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GestionareTrotinete">
+      <EntityTypeMapping TypeName="Database1Model.GestionareTrotinete">
+        <MappingFragment StoreEntitySet="GestionareTrotinete">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Oras" ColumnName="Oras" />
+          <ScalarProperty Name="Strada" ColumnName="Strada" />
+          <ScalarProperty Name="NrTroninete" ColumnName="NrTroninete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rezervari">
+      <EntityTypeMapping TypeName="Database1Model.Rezervari">
+        <MappingFragment StoreEntitySet="Rezervari">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Oras" ColumnName="Oras" />
+          <ScalarProperty Name="Strada" ColumnName="Strada" />
+          <ScalarProperty Name="NrTrotinete" ColumnName="NrTrotinete" />
+          <ScalarProperty Name="NrOre" ColumnName="NrOre" />
+          <ScalarProperty Name="DataRezervare" ColumnName="DataRezervare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
